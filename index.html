@@ -3,50 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Quiz Master</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
-    <div class="container mx-auto px-4 py-8 max-w-2xl">
-        <!-- Header -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-indigo-800 mb-2">Quiz Master</h1>
-            <p class="text-purple-600">Test your knowledge and have fun!</p>
-        </header>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Landing Page -->
+        <div id="landing-page" class="fade-in">
+            <header class="text-center mb-12">
+                <h1 class="text-5xl font-bold text-indigo-800 mb-4">Welcome to Quiz Master</h1>
+                <p class="text-xl text-purple-600">Test your knowledge and challenge yourself!</p>
+            </header>
 
-        <!-- Auth Section -->
-        <div id="auth-section" class="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Welcome!</h2>
-            
-            <div class="space-y-4">
-                <div>
-                    <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
-                    <input id="username" type="text" placeholder="Enter your username" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-trophy text-5xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-800">Engaging Quizzes</h3>
+                    </div>
+                    <p class="text-gray-700">Discover hundreds of quizzes on various topics from science to pop culture. Our questions are designed to be both fun and challenging.</p>
                 </div>
                 
-                <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                    <input id="password" type="password" placeholder="Enter your password" 
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-chart-line text-5xl text-green-500 mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-800">Track Your Progress</h3>
+                    </div>
+                    <p class="text-gray-700">Monitor your improvement over time with our detailed statistics and performance tracking features.</p>
                 </div>
-                
-                <div class="flex space-x-4 pt-2">
-                    <button id="login-btn" 
-                        class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
-                        <i class="fas fa-sign-in-alt mr-2"></i> Login
-                    </button>
-                    <button id="register-btn" 
-                        class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
-                        <i class="fas fa-user-plus mr-2"></i> Register
-                    </button>
+            </div>
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to Challenge Yourself?</h2>
+                <button id="get-started-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                    Get Started <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">What Our Users Say</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex justify-center mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-3">"The most engaging quiz app I've used!"</p>
+                        <p class="text-sm text-gray-600">- Sarah, Teacher</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex justify-center mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-3">"Great way to learn new things daily."</p>
+                        <p class="text-sm text-gray-600">- Michael, Student</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex justify-center mb-3">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-3">"Makes trivia night preparation easy!"</p>
+                        <p class="text-sm text-gray-600">- David, Quiz Enthusiast</p>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Auth Section -->
+        <div id="auth-section" style="display: none;" class="fade-in max-w-md mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-indigo-800 mb-2">Quiz Master</h1>
+                <p class="text-purple-600">Sign in to continue</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div class="space-y-4">
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                        <input id="username" type="text" placeholder="Enter your username" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                    </div>
+                    
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input id="password" type="password" placeholder="Enter your password" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                    </div>
+                    
+                    <div class="flex space-x-4 pt-2">
+                        <button id="login-btn" 
+                            class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </button>
+                        <button id="register-btn" 
+                            class="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-user-plus mr-2"></i> Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button id="back-to-landing" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                    <i class="fas fa-arrow-left mr-1"></i> Back to Home
+                </button>
+            </div>
+        </div>
+
         <!-- Quiz Section -->
-        <div id="quiz-section" style="display: none;" class="bg-white rounded-xl shadow-lg p-8">
+        <div id="quiz-section" style="display: none;" class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-xl font-semibold text-gray-700">Question <span id="question-number">1</span>/10</h2>
                 <div class="flex items-center">
@@ -88,36 +174,39 @@
         // Sample quiz data
         const quizData = [
             {
-            question: "Apa ibu kota Indonesia?",
-            options: ["Bandung", "Surabaya", "Jakarta", "Medan"],
-            answer: "Jakarta"
+                question: "What is the capital of France?",
+                options: ["London", "Berlin", "Paris", "Madrid"],
+                answer: "Paris"
             },
             {
-            question: "Siapa presiden pertama Indonesia?",
-            options: ["Soekarno", "Soeharto", "Habibie", "Jokowi"],
-            answer: "Soekarno"
+                question: "Which planet is known as the Red Planet?",
+                options: ["Venus", "Mars", "Jupiter", "Saturn"],
+                answer: "Mars"
             },
             {
-            question: "Pulau terbesar di Indonesia adalah?",
-            options: ["Sumatera", "Jawa", "Kalimantan", "Bali"],
-            answer: "Kalimantan"
+                question: "What is the largest mammal?",
+                options: ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
+                answer: "Blue Whale"
             },
             {
-            question: "Bahasa resmi negara Indonesia adalah?",
-            options: ["Bahasa Sunda", "Bahasa Jawa", "Bahasa Indonesia", "Bahasa Inggris"],
-            answer: "Bahasa Indonesia"
+                question: "Which language runs in a web browser?",
+                options: ["Java", "C", "Python", "JavaScript"],
+                answer: "JavaScript"
             },
             {
-            question: "Hari Kemerdekaan Indonesia diperingati setiap tanggal?",
-            options: ["1 Juni", "17 Agustus", "21 April", "10 November"],
-            answer: "17 Agustus"
+                question: "What year was JavaScript launched?",
+                options: ["1996", "1995", "1994", "All of the above"],
+                answer: "1995"
             }
         ];
 
         // DOM Elements
+        const landingPage = document.getElementById('landing-page');
         const authSection = document.getElementById('auth-section');
         const quizSection = document.getElementById('quiz-section');
         const userInfo = document.getElementById('user-info');
+        const getStartedBtn = document.getElementById('get-started-btn');
+        const backToLanding = document.getElementById('back-to-landing');
         const usernameInput = document.getElementById('username');
         const passwordInput = document.getElementById('password');
         const loginBtn = document.getElementById('login-btn');
@@ -126,65 +215,28 @@
         const optionsElement = document.getElementById('options');
         const submitBtn = document.getElementById('submit-btn');
         const resultElement = document.getElementById('result');
-
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         const questionNumberElement = document.getElementById('question-number');
         const scoreElement = document.getElementById('score');
         const displayUsername = document.getElementById('display-username');
-        // Update: Show result immediately after selecting an option
-        optionsElement.addEventListener('click', (e) => {
-            if (answered) return;
-
-            const optionBtn = e.target.closest('.option-btn');
-            if (optionBtn) {
-            // Remove selection from all options
-            document.querySelectorAll('.option-btn').forEach(btn => {
-                btn.classList.remove('bg-indigo-100', 'border-indigo-400');
-            });
-
-            // Add selection to clicked option
-            optionBtn.classList.add('bg-indigo-100', 'border-indigo-400');
-            selectedOption = quizData[currentQuestionIndex].options[parseInt(optionBtn.dataset.index)];
-
-            // Immediately check answer and show result
-            answered = true;
-            const currentQuestion = quizData[currentQuestionIndex];
-
-            // Highlight correct and wrong answers
-            document.querySelectorAll('.option-btn').forEach(btn => {
-                const optionIndex = parseInt(btn.dataset.index);
-                const option = currentQuestion.options[optionIndex];
-
-                if (option === currentQuestion.answer) {
-                btn.classList.add('bg-green-100', 'border-green-400');
-                } else if (option === selectedOption && selectedOption !== currentQuestion.answer) {
-                btn.classList.add('bg-red-100', 'border-red-400');
-                }
-            });
-
-            // Update score if correct
-            if (selectedOption === currentQuestion.answer) {
-                score++;
-                scoreElement.textContent = score;
-                resultElement.textContent = 'Correct! 🎉';
-                resultElement.className = 'mt-6 p-4 rounded-lg bg-green-100 text-green-800';
-            } else {
-                resultElement.textContent = `Incorrect! The correct answer is: ${currentQuestion.answer}`;
-                resultElement.className = 'mt-6 p-4 rounded-lg bg-red-100 text-red-800';
-            }
-
-            resultElement.classList.remove('hidden');
-            submitBtn.textContent = 'Next Question';
-            updateNavigationButtons();
-            }
-        });
 
         // Quiz state
         let currentQuestionIndex = 0;
         let score = 0;
         let selectedOption = null;
         let answered = false;
+
+        // Navigation between sections
+        getStartedBtn.addEventListener('click', () => {
+            landingPage.style.display = 'none';
+            authSection.style.display = 'block';
+        });
+
+        backToLanding.addEventListener('click', () => {
+            authSection.style.display = 'none';
+            landingPage.style.display = 'block';
+        });
 
         // Login/Register functionality
         loginBtn.addEventListener('click', () => {
